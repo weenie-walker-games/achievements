@@ -285,7 +285,6 @@ GameObject:
   - component: {fileID: 1134708768}
   - component: {fileID: 1134708767}
   - component: {fileID: 1134708771}
-  - component: {fileID: 1134708766}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -293,21 +292,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!111 &1134708766
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1134708765}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!136 &1134708767
 CapsuleCollider:
   m_ObjectHideFlags: 0

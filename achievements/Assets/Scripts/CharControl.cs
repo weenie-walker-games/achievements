@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Animation))]
+
 public class CharControl : MonoBehaviour
 {
 
@@ -16,7 +16,6 @@ public class CharControl : MonoBehaviour
 
 
     //hidden from Inspector window
-    private Animation _anim;
     private bool _isRunning;
     private float _horizontalMove;
     private float _verticalMove;
@@ -24,7 +23,7 @@ public class CharControl : MonoBehaviour
 
     private void Start()
     {
-        _anim = thePlayer.GetComponent<Animation>();
+        
 
     }
 
@@ -33,7 +32,6 @@ public class CharControl : MonoBehaviour
     {
         if(Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
         {
-            //_anim.Play("Run");
             _horizontalMove = Input.GetAxis("Horizontal") * Time.deltaTime * _horizontalSpeed;    //spinning around on y
             _verticalMove = Input.GetAxis("Vertical") * Time.deltaTime * _verticalSpeed;          //forwards and backwards on zed
             _isRunning = true;
@@ -42,7 +40,6 @@ public class CharControl : MonoBehaviour
         }
         else
         {
-           // _anim.Play("Idle");
             _isRunning = false;
         }
     }
