@@ -68,4 +68,18 @@ public class GlobalAchievements : MonoBehaviour
         achDesc.GetComponent<Text>().text = "";
         achActive = false;
     }
+
+
+    //Use this section to clear the PlayerPrefs
+
+    [SerializeField]
+    private string[] achievementArray;
+
+    public void ClearPlayerPrefs()
+    {
+        foreach (var achievement in achievementArray)
+        {
+            PlayerPrefs.SetInt(achievement, 0);
+        }
+    }
 }
