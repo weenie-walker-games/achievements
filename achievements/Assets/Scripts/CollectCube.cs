@@ -12,7 +12,6 @@ public class CollectCube : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            Debug.Log("Collided");
             GlobalAchievements.ach01Count += 1;
             //collectSound.Play();                  //play the sound when a source file is obtained with proper licensing
             Destroy(gameObject);
