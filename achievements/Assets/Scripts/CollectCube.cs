@@ -10,9 +10,14 @@ public class CollectCube : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GlobalAchievements.ach01Count += 1;
-        //collectSound.Play();                  //play the sound when a source file is obtained with proper licensing
-        Destroy(gameObject);
+        if(other.tag == "Player")
+        {
+            Debug.Log("Collided");
+            GlobalAchievements.ach01Count += 1;
+            //collectSound.Play();                  //play the sound when a source file is obtained with proper licensing
+            Destroy(gameObject);
+        }
+
     }
 
 }
