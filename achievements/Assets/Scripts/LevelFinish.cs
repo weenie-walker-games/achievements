@@ -20,10 +20,7 @@ public class LevelFinish : MonoBehaviour
         fadeOut.GetComponent<Animation>().Play("FadeOut");
         yield return new WaitForSeconds(3.5f);
         GlobalAchievements.triggerAch02 = true;
-
-        //Reset everything; this code may be adjusted if we were to jump to a new scene
-        thePlayer.GetComponent<CharControl>().enabled = true;   //Reset player movement; 
-        fadeOut.SetActive(false);
+        
     }
 
 }
