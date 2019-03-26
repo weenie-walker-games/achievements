@@ -11,15 +11,14 @@ https://www.youtube.com/playlist?list=PLZ1b66Z1KFKijcA72G0Sv6t_p9XFjhKdO
 
 
 ## Project Status
-Most recent video completed is Video 1.  At this point, the notification template for in-game achievements has been built in the scene.
-
-Additionally, the first achievement has been coded and implemented.  NOTE: Due to licensing requirements, the achievement sounds have not been implemented in game, but the line of code that actually plays the sounds has been commented out.
+Most recent video completed is Video 2.  The first two achievements have been coded and implemented.  NOTE: Due to licensing requirements, the achievement sounds have not been implemented in game with the line of code that actually plays the sounds  commented out.
 
 
 ## To-Do List:
 - Continue with YouTube playlist and add more in-game achievements
 - Refactor the achievement code to eliminate duplicative achievement code
 - Find sounds with a license that allows for distribution to include in project
+- Implement the follow-up to the LevelComplete Achievement where it switches to the next scene
 
 
 
