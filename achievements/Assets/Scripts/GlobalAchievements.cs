@@ -36,6 +36,11 @@ public class GlobalAchievements : MonoBehaviour
     public int ach02Code;                       //A random integer that can be saved to PlayerPrefs and used to show if an achievement has previously been obtained
 
 
+    //Achievement 03 Specific - Time Based
+    public GameObject ach03Image;
+    public static bool triggerAch03 = false;    //A static bool to trigger that this achievement has been obtained; linked to TimerTrigger.cs
+    public int ach03Code;                       //A random integer that can be saved to PlayerPrefs and used to show if an achievement has previously been obtained
+
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +53,7 @@ public class GlobalAchievements : MonoBehaviour
     {
         ach01Code = PlayerPrefs.GetInt("Ach01");
         ach02Code = PlayerPrefs.GetInt("Ach02");
+        ach03Code = PlayerPrefs.GetInt("Ach03");
 
         if (ach01Count == ach01Trigger && ach01Code != 12345)            //The code 12345 is just an integer used for comparison purposes rather than using an on/off style bool.
         {
@@ -57,6 +63,11 @@ public class GlobalAchievements : MonoBehaviour
         if (triggerAch02 == true && ach02Code != 12346)            //The code 12346 is just an integer used for comparison purposes rather than using an on/off style bool.
         {
             StartCoroutine(Trigger02Ach());
+        }
+
+        if (triggerAch03 == true && ach03Code != 12347)
+        {
+            StartCoroutine(Trigger03Ach());
         }
 
 
@@ -88,7 +99,7 @@ public class GlobalAchievements : MonoBehaviour
     {
         achActive = true;
         ach02Code = 12346;                          //Set code to show this achievement has been obtained
-        PlayerPrefs.SetInt("Ach02", ach01Code);
+        PlayerPrefs.SetInt("Ach02", ach02Code);
         //achSound.Play();                          //Once an audio file has been obtained, uncomment out this line to use
         ach02Image.SetActive(true);
         achTitle.GetComponent<Text>().text = "COMPLETED!";
@@ -99,6 +110,26 @@ public class GlobalAchievements : MonoBehaviour
         //Resetting UI
         achNote.SetActive(false);
         ach02Image.SetActive(false);
+        achTitle.GetComponent<Text>().text = "";
+        achDesc.GetComponent<Text>().text = "";
+        achActive = false;
+    }
+
+    IEnumerator Trigger03Ach()
+    {
+        achActive = true;
+        ach03Code = 12347;                          //Set code to show this achievement has been obtained
+        PlayerPrefs.SetInt("Ach03", ach03Code);
+        //achSound.Play();                          //Once an audio file has been obtained, uncomment out this line to use
+        ach03Image.SetActive(true);
+        achTitle.GetComponent<Text>().text = "WELL TIMED!";
+        achDesc.GetComponent<Text>().text = "You created a time based achievement!";
+        achNote.SetActive(true);
+        yield return new WaitForSeconds(7);
+
+        //Resetting UI
+        achNote.SetActive(false);
+        ach03Image.SetActive(false);
         achTitle.GetComponent<Text>().text = "";
         achDesc.GetComponent<Text>().text = "";
         achActive = false;
