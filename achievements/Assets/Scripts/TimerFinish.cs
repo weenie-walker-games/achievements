@@ -9,12 +9,19 @@ public class TimerFinish : MonoBehaviour
     
     void Start()
     {
+       
+    }
+
+
+    private void OnEnable()
+    {
         StartCoroutine(TimeAchieve());
     }
 
     private void OnTriggerEnter(Collider other)
     {
         GlobalAchievements.triggerAch03 = true;
+        Destroy(timerTrigger);                      //Clean up the scene as this trigger is no longer necessary
         Destroy(gameObject);
     }
 
