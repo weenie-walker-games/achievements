@@ -11,7 +11,7 @@ https://www.youtube.com/playlist?list=PLZ1b66Z1KFKijcA72G0Sv6t_p9XFjhKdO
 
 
 ## Project Status
-Most recent video completed is Video 2.  The first two achievements have been coded and implemented.  NOTE: Due to licensing requirements, the achievement sounds have not been implemented in game with the line of code that actually plays the sounds  commented out.
+Most recent video completed is Video 3.  The first three achievements have been coded and implemented.  NOTE: Due to licensing requirements, the achievement sounds have not been implemented in game with the line of code that actually plays the sounds  commented out.
 
 
 ## To-Do List:
@@ -19,6 +19,7 @@ Most recent video completed is Video 2.  The first two achievements have been co
 - Refactor the achievement code to eliminate duplicative achievement code
 - Find sounds with a license that allows for distribution to include in project
 - Implement the follow-up to the LevelComplete Achievement where it switches to the next scene
+- Decide whether the time based achievement will be a single try to collect or allow multiple tries; currently set to multiple tries with randomized spawn location for the item to be found
 
 
 
